@@ -43,42 +43,38 @@ Finish time: 4:10PM
 Actual time needed to complete: 55MINS
 ```
 
-3. As a user, I want to be able to browse the search results.
 
 ```md
-Number and name of feature: ________________________________
+Number and name of feature: 3. As a user, I want to be able to browse the search results.
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 2HR
 
-Start time: _____
+Start time: 4:20PM
 
-Finish time: _____
+Finish time: 6:10PM
 
-Actual time needed to complete: _____
+Actual time needed to complete: 1HR 50MIN
 ```
 
-4. As a user, I want to view any error messages that occur during the usage of my book list application so that I know if something has gone wrong.
 
 ```md
-Number and name of feature: ________________________________
+Number and name of feature: 4. As a user, I want to view any error messages that occur during the usage of my book list application so that I know if something has gone wrong.
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 10MIN
 
-Start time: _____
+Start time: 6:10PM
 
-Finish time: _____
+Finish time: 6:16PM
 
-Actual time needed to complete: _____
+Actual time needed to complete: 6PM
 ```
 
-5. As a user, I want a simple, clean looking UI so that my application is easy to navigate.
-
 ```md
-Number and name of feature: ________________________________
+Number and name of feature: 5. As a user, I want a simple, clean looking UI so that my application is easy to navigate.
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 1HR
 
-Start time: _____
+Start time: 6:20PM
 
 Finish time: _____
 
