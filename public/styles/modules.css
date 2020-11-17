@@ -1,0 +1,15 @@
+#textBox{
+  background-color: white;
+  color: black;
+  text-align: left;
+}
+
+.radioButton{
+  background-color: light gray;
+  color: black;
+  width: 100%;
+}
+
+input{
+  padding: 10px;
+}
