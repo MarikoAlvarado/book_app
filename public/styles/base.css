@@ -2,14 +2,20 @@
 @import "modules.css";
 
 *{
-  background-color: black;
+  background-color: darkgray;
   color: white;
   text-align: center;
 }
 
 #resultsBody{
-  background-color: gray;
+  /* background-color: rgb(158, 157, 157); */
   width: 350px;
-
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
 }
 
+h1{
+  font-size: 20px;
+  padding: 10px;
+}

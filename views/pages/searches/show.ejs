@@ -10,22 +10,27 @@
   <link href="../styles/modules.css" rel="stylesheet" type="text/css">
 </head>
 
-<body id="resultsBody">
-  <main>
+<body>
+  <header id="newHeader">
+    
+  </header>
+  <main id="resultsBody">
 
     <ul><% searchResults.forEach(book => { %>
-      <li>
-
+      <li >
+        
         <form action="/books" method="post">
-          <img src="<%=book.image_url %> "> 
-          <h2><%=book.title %></h2>
-          <h3><%=book.author %></h3>
-          <p><%=book.description %></p>
-          <input type="hidden" name="newBook" value="<%=JSON.stringify(book)%>"></input>
+          <section id="searchResults">
+            <img src="<%=book.image_url %> "> 
+            <h2 class="formElement"><%=book.title %></h2>
+            <h3 class="formElement"><%=book.author %></h3>
+            <p class="formElement"><%=book.description %></p>
+            <input type="hidden" name="newBook" value="<%=JSON.stringify(book)%>"></input>
 
-          <button type="submit">Select this Book</button>
-        </form>
-      </li>
+            <button type="submit">Select this Book</button>
+          </section>
+          </form>
+        </li>
 
       <% }) %>
     </ul>

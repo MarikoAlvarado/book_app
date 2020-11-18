@@ -8,16 +8,18 @@
 
 <body>
   <header> <%- include('../layout/header') %> </header>
-  <main>
+  <main id="resultsBody">
     <ul>
       <% results.forEach(books => { %>
         <li data-id= "<%= books.id %>">
+          <section id="searchResults">
           <img src="<%= books.image_url %>"/>
           <h4>Title: <%= books.title %></h4>
           <h5>Author: <%= books.author %></h5>
           <a href="./books/<%= books.id %>">View Book Details</a>
+          </section>
         </li>
-      <% }) %>
+        <% }) %>
     </ul>
   </main>
 </body>
