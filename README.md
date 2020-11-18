@@ -18,6 +18,7 @@
 
 ## User Story
 
+**Day 1**
 ```md
 Number and name of feature: 1. As a user, I want my application to load quickly so that I have an enjoyable experience.
 
@@ -94,3 +95,53 @@ Finish time: _____
 
 Actual time needed to complete: _____
 ```
+**Day 2**
+Number and name of feature: Feature 1: As a user, I want all of my saved books to be displayed on the home page so that I can view all of the books from my collection in a single view.
+
+Estimate of time needed to complete: 2 hours
+
+Start time: 2:00
+
+Finish time: 4:20
+
+Actual time needed to complete: 2 hours 20 minutes
+
+Number and name of feature: Feature 2: As a user, I want to request information about a single book so that I can view its additional details and share it by URL.
+
+Estimate of time needed to complete: 1 hour
+
+Start time: 4:25
+
+Finish time: _____
+
+Actual time needed to complete: _____
+
+Number and name of feature: Feature 3: As a user, I want the ability to add new books to my application so that I can save search results.
+
+Estimate of time needed to complete: _____
+
+Start time: _____
+
+Finish time: _____
+
+Actual time needed to complete: _____
+
+Number and name of feature: Feature 4: As a user, I want the application to be designed in a consistent way so that I do not experience any down time or slow load times.
+
+Estimate of time needed to complete: _____
+
+Start time: _____
+
+Finish time: _____
+
+Actual time needed to complete: _____
+
+Number and name of feature: Feature 5: As a user, I want a simple, clean-looking UI so that my application is easy to navigate.
+
+Estimate of time needed to complete: _____
+
+Start time: _____
+
+Finish time: _____
+
+Actual time needed to complete: _____
