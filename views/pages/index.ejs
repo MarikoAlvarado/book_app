@@ -15,7 +15,7 @@
           <img src="<%= books.image_url %>"/>
           <h4>Title: <%= books.title %></h4>
           <h5>Author: <%= books.author %></h5>
-          <a href="/books/detail/<%= books.id %>">View Book Details</a>
+          <a href="/views/pages/books/show/<%= books.id %>">View Book Details</a>
         </li>
       <% }) %>
     </ul>

@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<head>
+    <%- include('../../layout/head.ejs') %>
+</head>
+<body>
+    <header><%- include('../../layout/header') %></header>
+    <main>
+            <section data-id= "<%= books.id %>">
+                <%- include('../books/detail.ejs') %>
+            </section>
+    </main>
+</body>
