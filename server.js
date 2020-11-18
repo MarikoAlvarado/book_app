@@ -3,8 +3,12 @@
 const express = require('express');
 const app = express();
 const superagent = require('superagent');
-const ejs = require('ejs');
+// const ejs = require('ejs');
+const pg = require('pg');
 require('dotenv').config();
+const client = new pg.Client(process.env.DATABASE_URL);
+client.connect();
+client.on('error', err=> console.err(err));
 
 const GOOGLE_BOOKS_API = process.env.GOOGLE_BOOKS_API;
 
@@ -15,6 +19,7 @@ app.use(express.urlencoded({ extended: true }));
 app.set('view engine', 'ejs');
 
 app.get('/', renderHomepage);
+// app.post('/', addBook);
 
 app.get('/hello', (req, res) => {
   res.send('hello?');
@@ -27,9 +32,20 @@ function newForm(req, res) {
   res.render('pages/searches/new.ejs');
 }
 
+// addTask from demo
 function renderHomepage(req, res) {
-  res.status(200).render('pages/index');
+  let SQL = 'SELECT * FROM books;';
+  // console.log(SQL);
+  return client.query(SQL)
+    // .then()
+    .then(results => res.render('./pages/index', { results: results.rows }))
+    .catch(err => console.error(err));
+  // res.status(200).render('pages/index', {results: []});
+
 }
+// function addBook(req, res) {
+
+// }
 
 function createSearch(req, res) {
   console.log('req body:', req.body);
@@ -56,6 +72,7 @@ function Book(info) {
   this.title = info.title || 'no title available';
   this.image_url = info.imageLinks.smallThumbnail || 'https://i.imgur.com/J5LVHEL.jpg';
   this.author = info.authors;
+  this.isbn = info.isbn;
   this.description = info.description;
 
 }

@@ -3,19 +3,22 @@
 <html>
 
 <head>
-  <title></title>
-  <link href="../styles/reset.css" rel="stylesheet" type="text/css">
-  <link href="../styles/base.css" rel="stylesheet" type="text/css">
-  <link href="../styles/layout.css" rel="stylesheet" type="text/css">
-  <link href="../styles/modules.css" rel="stylesheet" type="text/css">
+  <%- include('../layout/head') %>
 </head>
 
 <body>
-  <header>
-    <h1>We're alive!</h1>
-  </header>
+  <header> <%- include('../layout/header') %> </header>
   <main>
-
+    <ul>
+      <% results.forEach(books => { %>
+        <li data-id= "<%= books.id %>">
+          <img src="<%= books.image_url %>"/>
+          <h4>Title: <%= books.title %></h4>
+          <h5>Author: <%= books.author %></h5>
+          <a href="/books/detail/<%= books.id %>">View Book Details</a>
+        </li>
+      <% }) %>
+    </ul>
   </main>
 </body>
 
