@@ -11,9 +11,11 @@
 </head>
 
 <body>
-  <h1>Search for Books</h1>
-
-  <form action="/searches" method="post">
+  <header id="newHeader">
+    <h1 id="h1New">Search for Books</h1>
+  </header>
+  
+  <form  id="bodyNew" action="/searches" method="post">
     <input id="textBox" type="text" name="search" placeholder="enter author or title" required>
 
     <fieldset class="radioButton" \>
@@ -21,12 +23,12 @@
       <input type="radio" name="search" value="title" required>
     </fieldset>
 
-    <fieldset class="radioButton">
+    <fieldset class="radioButton" id="radioButton2">
       <label for=" author">Author:</label>
       <input type="radio" name="search" value="author" required>
     </fieldset>
 
-    <button type="submit">Search the Google Books API</button>
+    <button id="buttonNew" type="submit">Search the Google Books API</button>
 
   </form>
   <main>

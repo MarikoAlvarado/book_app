@@ -2,14 +2,50 @@
   background-color: white;
   color: black;
   text-align: left;
+  width: 74%;
+  border: 1px black solid;
+  margin: 10px;
 }
 
 .radioButton{
-  background-color: light gray;
+  filter: grayscale(0);
   color: black;
-  width: 100%;
+  width: 74%;
+  display: inline;
+  overflow: hidden;
+  text-align: left;
+  padding: 10px;
+}
+#radioButton2{
+  margin-top: 10px;
 }
 
 input{
   padding: 10px;
+  border: 1px black solid;
+}
+#bodyNew{
+  border: 1px black solid;
+}
+#buttonNew{
+  padding: 10px;
+  width: 80%;
+  margin-top: 10px;
+}
+#h1New{
+  text-align: left;
+}
+#searchResults{
+  border: 30px rgb(63, 62, 62) solid;
+  position: relative;
+  /* margin: 40px auto 10px auto; */
+  margin-left: auto;
+  margin-right: auto;
+  height: 400px;
+  width: 200px;
+  padding: 25px 25px 25px 35px;
+}
+.formElement{
+  /* background-color: gray; */
+  /* width: 75%; */
 }
