@@ -78,7 +78,7 @@ function createSearch(req, res) {
 function Book(info) {
   console.log(info.imageLinks)
   this.title = info.title || 'no title available';
-  this.image_url = info.imageLinks.smallThumbnail || 'https://i.imgur.com/J5LVHEL.jpg';
+  this.image_url = info.imageLinks ? info.imageLinks.smallThumbnail: 'https://i.imgur.com/J5LVHEL.jpg';
   this.author = info.authors ? info.authors[0]: 'Author unavailable';
   this.isbn = info.industryIdentifiers ? info.industryIdentifiers[0].identifier: 'Not available';
   this.description = info.description ? info.description: 'No description available';
