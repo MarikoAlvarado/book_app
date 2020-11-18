@@ -16,10 +16,15 @@
     <ul><% searchResults.forEach(book => { %>
       <li>
 
-        <img src="<%=book.image_url %> ">
-        <h2><%=book.title %></h2>
-        <h3><%=book.author %></h3>
-        <p><%=book.description %></p>
+        <form action="/books" method="post">
+          <img src="<%=book.image_url %> "> 
+          <h2><%=book.title %></h2>
+          <h3><%=book.author %></h3>
+          <p><%=book.description %></p>
+          <input type="hidden" name="newBook" value="<%=JSON.stringify(book)%>"></input>
+
+          <button type="submit">Select this Book</button>
+        </form>
       </li>
 
       <% }) %>

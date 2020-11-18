@@ -112,29 +112,29 @@ Estimate of time needed to complete: 1 hour
 
 Start time: 4:25
 
-Finish time: _____
+Finish time: 5:25
 
-Actual time needed to complete: _____
+Actual time needed to complete: 1 hour
 
 Number and name of feature: Feature 3: As a user, I want the ability to add new books to my application so that I can save search results.
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 1 hour
 
-Start time: _____
+Start time: 5:30
 
-Finish time: _____
+Finish time: 6:35
 
-Actual time needed to complete: _____
+Actual time needed to complete: 1 hour 5 minutes
 
 Number and name of feature: Feature 4: As a user, I want the application to be designed in a consistent way so that I do not experience any down time or slow load times.
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 30 min
 
-Start time: _____
+Start time: 6:35
 
-Finish time: _____
+Finish time: 6:45
 
-Actual time needed to complete: _____
+Actual time needed to complete: 10 minutes
 
 Number and name of feature: Feature 5: As a user, I want a simple, clean-looking UI so that my application is easy to navigate.
 

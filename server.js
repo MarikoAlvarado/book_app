@@ -19,7 +19,8 @@ app.use(express.urlencoded({ extended: true }));
 app.set('view engine', 'ejs');
 
 app.get('/', renderHomepage);
-// app.post('/', addBook);
+app.get('/books/:id', getOneBook);
+app.post('/books', addBook);
 
 app.get('/hello', (req, res) => {
   res.send('hello?');
@@ -43,9 +44,16 @@ function renderHomepage(req, res) {
   // res.status(200).render('pages/index', {results: []});
 
 }
-// function addBook(req, res) {
 
-// }
+function getOneBook(req, res) {
+  let SQL = 'SELECT * FROM books WHERE id=$1;';
+  let values = [req.params.id];
+  return client.query(SQL, values)
+    .then(result => {
+      return res.render('./pages/books/show', { books: result.rows[0] })
+    })
+    .catch(err => console.error(err));
+}
 
 function createSearch(req, res) {
   console.log('req body:', req.body);
@@ -71,13 +79,26 @@ function Book(info) {
   console.log(info.imageLinks)
   this.title = info.title || 'no title available';
   this.image_url = info.imageLinks.smallThumbnail || 'https://i.imgur.com/J5LVHEL.jpg';
-  this.author = info.authors;
-  this.isbn = info.isbn;
-  this.description = info.description;
+  this.author = info.authors ? info.authors[0]: 'Author unavailable';
+  this.isbn = info.industryIdentifiers ? info.industryIdentifiers[0].identifier: 'Not available';
+  this.description = info.description ? info.description: 'No description available';
 
 }
 
-
+function addBook(req, res) {
+  // console.log('this is the request');
+  let chosenBook = JSON.parse(req.body.newBook);
+  let {title, author, isbn, image_url, description} = chosenBook;
+  console.log(req.body.newBook);
+  let SQL = 'INSERT INTO books (title, author, isbn, image_url, description) VALUES ($1, $2, $3, $4, $5) RETURNING id;';
+  let values = [title, author, isbn, image_url, description];
+  console.log(values)
+  return client.query(SQL, values)
+    .then (data => {
+      console.log(data);
+      res.redirect(`./books/${data.rows[0].id}`)})
+    .catch(err => console.error(err));
+}
 app.listen(PORT, () => {
   console.log(`server is up at ${PORT}`);
 })
