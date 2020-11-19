@@ -144,4 +144,25 @@ Start time: _____
 
 Finish time: _____
 
-Actual time needed to complete: _____
+**Day 3**
+
+Number and name of feature: 1. As a user, I want to update the details of a book so that it displays the way I want it to, according to my personalized preferences.
+
+Estimate of time needed to complete: 2HRS
+
+Start time: 1:50PM
+
+Finish time: 4:20PM 
+
+Actual time needed to complete: 2HRS 30MIN
+
+Number and name of feature: 1. As a user, I want to update the details of a book so that it displays the way I want it to, according to my personalized preferences.
+
+Estimate of time needed to complete: 2HRS
+
+Start time: 1:50PM
+
+Finish time: 4:20PM 
+
+Actual time needed to complete: 2HRS 30MIN
+

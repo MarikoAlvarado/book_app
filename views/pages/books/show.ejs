@@ -1,12 +1,28 @@
 <!DOCTYPE html>
+
 <head>
     <%- include('../../layout/head.ejs') %>
 </head>
+
 <body>
     <header><%- include('../../layout/header') %></header>
     <main>
-            <section data-id= "<%= books.id %>">
-                <%- include('../books/detail.ejs') %>
-            </section>
+        <section class="bookDetails" data-id="<%= books.id %>">
+            <%- include('../books/detail.ejs') %>
+        </section>
+
+        <section>
+            <div id="formDiv">Click To Update
+                <form class="updateBook" action="/update/<%= books.id %>?_method=PUT" method="POST">
+                    <!-- <img src="<%= books.image_url %>" /> -->
+                    <input type="text" name="image_url" value="<%= books.image_url %>">
+                    <input type="text" name="title" value="<%=books.title%>">
+                    <textarea name="description"><%=books.description%></textarea>
+                    <input type="text" name="author" value="<%= books.author %>">
+                    <input type="text" name="isbn" value="<%= books.isbn %>">
+                    <button id="updateButton" type="submit">Update Book</button>
+                </form>
+            </div>
+        </section>
     </main>
 </body>

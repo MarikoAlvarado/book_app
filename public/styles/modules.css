@@ -20,9 +20,11 @@
   margin-top: 10px;
 }
 
-input{
+input, textarea, #updateButton{
   padding: 10px;
   border: 1px black solid;
+  width: 250px;
+  margin-top: 10px;
 }
 #bodyNew{
   border: 1px black solid;
@@ -48,4 +50,8 @@ input{
 .formElement{
   /* background-color: gray; */
   /* width: 75%; */
+}
+
+#formDiv:hover .updateBook{
+display: inline-block;
 }
