@@ -14,7 +14,6 @@
         <section>
             <div id="formDiv">Click To Update
                 <form class="updateBook" action="/update/<%= books.id %>?_method=PUT" method="POST">
-                    <!-- <img src="<%= books.image_url %>" /> -->
                     <input type="text" name="image_url" value="<%= books.image_url %>">
                     <input type="text" name="title" value="<%=books.title%>">
                     <textarea name="description"><%=books.description%></textarea>
@@ -23,6 +22,11 @@
                     <button id="updateButton" type="submit">Update Book</button>
                 </form>
             </div>
+        </section>
+        <section>
+            <form action="/delete/<%= books.id %>?_method=DELETE" method="POST">
+                <button type="submit">Delete Book</button>
+            </form>
         </section>
     </main>
 </body>

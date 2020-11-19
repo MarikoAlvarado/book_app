@@ -1,27 +1,21 @@
 <!DOCTYPE html>
-
 <html>
 
 <head>
+  <%- include('../../layout/head.ejs') %>
   <title>Searches</title>
-  <link href="../styles/reset.css" rel="stylesheet" type="text/css">
-  <link href="../styles/base.css" rel="stylesheet" type="text/css">
-  <link href="../styles/layout.css" rel="stylesheet" type="text/css">
-  <link href="../styles/modules.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
   <header id="newHeader">
-    
+    <%- include('../../layout/header') %>
   </header>
   <main id="resultsBody">
-
     <ul><% searchResults.forEach(book => { %>
-      <li >
-        
+      <li>
         <form action="/books" method="post">
           <section id="searchResults">
-            <img src="<%=book.image_url %> "> 
+            <img src="<%=book.image_url %> ">
             <h2 class="formElement"><%=book.title %></h2>
             <h3 class="formElement"><%=book.author %></h3>
             <p class="formElement"><%=book.description %></p>
@@ -29,12 +23,10 @@
 
             <button type="submit">Select this Book</button>
           </section>
-          </form>
-        </li>
-
+        </form>
+      </li>
       <% }) %>
     </ul>
-
   </main>
 </body>
 

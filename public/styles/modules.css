@@ -40,18 +40,12 @@ input, textarea, #updateButton{
 #searchResults{
   border: 30px rgb(63, 62, 62) solid;
   position: relative;
-  /* margin: 40px auto 10px auto; */
   margin-left: auto;
   margin-right: auto;
   height: 400px;
   width: 200px;
   padding: 25px 25px 25px 35px;
 }
-.formElement{
-  /* background-color: gray; */
-  /* width: 75%; */
-}
-
 #formDiv:hover .updateBook{
 display: inline-block;
 }
