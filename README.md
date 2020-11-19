@@ -82,9 +82,10 @@ Finish time: _____
 Actual time needed to complete: _____
 ```
 
+```md
 6. As a user, I want the application to have a home page, so that I can see see relevant information
 
-```md
+
 Number and name of feature: ________________________________
 
 Estimate of time needed to complete: _____
@@ -96,6 +97,8 @@ Finish time: _____
 Actual time needed to complete: _____
 ```
 **Day 2**
+
+```md
 Number and name of feature: Feature 1: As a user, I want all of my saved books to be displayed on the home page so that I can view all of the books from my collection in a single view.
 
 Estimate of time needed to complete: 2 hours
@@ -105,7 +108,8 @@ Start time: 2:00
 Finish time: 4:20
 
 Actual time needed to complete: 2 hours 20 minutes
-
+```
+```md
 Number and name of feature: Feature 2: As a user, I want to request information about a single book so that I can view its additional details and share it by URL.
 
 Estimate of time needed to complete: 1 hour
@@ -115,7 +119,9 @@ Start time: 4:25
 Finish time: 5:25
 
 Actual time needed to complete: 1 hour
+```
 
+```md
 Number and name of feature: Feature 3: As a user, I want the ability to add new books to my application so that I can save search results.
 
 Estimate of time needed to complete: 1 hour
@@ -125,7 +131,8 @@ Start time: 5:30
 Finish time: 6:35
 
 Actual time needed to complete: 1 hour 5 minutes
-
+```
+```md
 Number and name of feature: Feature 4: As a user, I want the application to be designed in a consistent way so that I do not experience any down time or slow load times.
 
 Estimate of time needed to complete: 30 min
@@ -135,7 +142,8 @@ Start time: 6:35
 Finish time: 6:45
 
 Actual time needed to complete: 10 minutes
-
+```
+```md
 Number and name of feature: Feature 5: As a user, I want a simple, clean-looking UI so that my application is easy to navigate.
 
 Estimate of time needed to complete: _____
@@ -143,9 +151,10 @@ Estimate of time needed to complete: _____
 Start time: _____
 
 Finish time: _____
-
+```
 **Day 3**
 
+```md
 Number and name of feature: 1. As a user, I want to update the details of a book so that it displays the way I want it to, according to my personalized preferences.
 
 Estimate of time needed to complete: 2HRS
@@ -155,14 +164,15 @@ Start time: 1:50PM
 Finish time: 4:20PM 
 
 Actual time needed to complete: 2HRS 30MIN
+```
+```md
+Number and name of feature: 2. As a user, I want to remove books from my collection so that it accurately represents my favorite books.
 
-Number and name of feature: 1. As a user, I want to update the details of a book so that it displays the way I want it to, according to my personalized preferences.
+Estimate of time needed to complete: 1HR
 
-Estimate of time needed to complete: 2HRS
+Start time: 4:30PM
 
-Start time: 1:50PM
+Finish time: 6:00PM 
 
-Finish time: 4:20PM 
-
-Actual time needed to complete: 2HRS 30MIN
-
+Actual time needed to complete: 1HR 30MINS
+```

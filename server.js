@@ -10,7 +10,6 @@ const client = new pg.Client(process.env.DATABASE_URL);
 client.on('error', err => console.err(err));
 
 const GOOGLE_BOOKS_API = process.env.GOOGLE_BOOKS_API;
-
 const PORT = process.env.PORT || 3000
 
 app.use(express.static('./public'));
@@ -23,16 +22,21 @@ app.post('/books', addBook);
 
 app.use(methodOverride('_method'));
 app.put('/update/:id', updateBook);
-
-app.get('/hello', (req, res) => {
-  res.send('hello?');
-})
+app.delete('/delete/:id', deleteBook);
 
 app.get('/searches/new', newForm);
 app.post('/searches', createSearch);
 
+
+function deleteBook(req, res) {
+  let SQL = `DELETE FROM books WHERE id=${req.params.id};`;
+  client.query(SQL)
+    .then(res.redirect(`../`))
+    .catch(err => console.error(err));
+}
+
+
 function updateBook(req, res) {
-  // console.log('body', req.body);
   console.log('method', req.method);
   let { title, author, isbn, image_url, description } = req.body;
   let SQL = `UPDATE books SET title=$1, author=$2, isbn=$3, image_url=$4, description=$5 WHERE id=$6;`;
@@ -43,12 +47,10 @@ function updateBook(req, res) {
     .catch(err => console.error(err));
 }
 
-
 function newForm(req, res) {
   res.render('pages/searches/new.ejs');
 }
 
-// addTask from demo
 function renderHomepage(req, res) {
   let SQL = 'SELECT * FROM books;';
   return client.query(SQL)
@@ -74,7 +76,6 @@ function createSearch(req, res) {
 
   superagent.get(url)
     .then(data => {
-      // console.log(data.body.items);
       return data.body.items.map(book => {
         return new Book(book.volumeInfo);
       })
@@ -97,16 +98,13 @@ function Book(info) {
 }
 
 function addBook(req, res) {
-  // console.log('this is the request');
   let chosenBook = JSON.parse(req.body.newBook);
   let { title, author, isbn, image_url, description } = chosenBook;
-  console.log(req.body.newBook);
   let SQL = 'INSERT INTO books (title, author, isbn, image_url, description) VALUES ($1, $2, $3, $4, $5) RETURNING id;';
   let values = [title, author, isbn, image_url, description];
-  console.log(values)
+
   return client.query(SQL, values)
     .then(data => {
-      console.log(data);
       res.redirect(`./books/${data.rows[0].id}`)
     })
     .catch(err => console.error(err));
