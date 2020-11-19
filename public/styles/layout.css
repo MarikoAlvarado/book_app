@@ -18,3 +18,10 @@ ul{
   box-shadow: 5px rgb(94, 94, 94);
 
 }
+.updateBook{
+  
+  display: none;
+  width: 300px;
+
+
+}
